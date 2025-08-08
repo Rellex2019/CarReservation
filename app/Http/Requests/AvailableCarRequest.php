@@ -25,7 +25,7 @@ class AvailableCarRequest extends FormRequest
             'start_time' => 'required|date',
             'end_time' => 'required|date|after:start_time',
             'model' => 'nullable|string',
-            'comfort_category_id' => 'nullable|integer|exists:comfort_categories,id',
+            'category_id' => 'nullable|integer|exists:comfort_categories,id',
         ];
     }
 }

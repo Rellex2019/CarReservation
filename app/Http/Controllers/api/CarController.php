@@ -15,8 +15,8 @@ class CarController extends Controller
         if (! empty($request['model'])) {
             $cars->where('model', 'like', '%'.$request['model'].'%');
         }
-        if (! empty($request['comfort_category_id'])) {
-            $cars->where('comfort_category_id', $request['comfort_category_id']);
+        if (! empty($request['category_id'])) {
+            $cars->where('category_id', $request['category_id']);
         }
 
         $availableCars = $cars->get();
